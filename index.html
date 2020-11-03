@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- EXTERNAL-LINKS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Movie API</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div>
+        <h3 class="logo"> MovieAPI</h3>
+    </div>
+
+    <div class="nav-icon">
+      <div class="icon-bar" onclick="Show()">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+
+      <ul id="nav-lists">
+        <li class="close"><i  onclick="Hide()" class="fa fa-close"></i></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#movies">Movies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section>
+    <button onclick="myFunction()">Toggle dark mode</button>
+    <div class="searchBox">
+      <input type="search" class="search" placeholder="Search for a movie">
+    </div>
+    <div class="container spacer"  id="movies">
+      <h2 class="text-color2">Latest Release</h2>
+      <br>
+     <div class="row">
+      <div class="card">
+        <img src="img/movie1.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>MASTERMIND</b></h4> 
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/movie2.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>HP7</b></h4>
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/movie3.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>300 RISE OF AN EMPIRE</b></h4>
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>  
+        </div>
+      </div>
+     </div>
+
+     <br>
+
+     <div class="row">
+      <div class="card">
+        <img src="img/movie4.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>OBLIVION</b></h4>
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>  
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/movie5.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>SUPERGIRL</b></h4> 
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/movie6.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>GREAT WARRIORS</b></h4>
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>  
+        </div>
+      </div>
+     </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container spacer">
+      <h2 class="text-color2">Most Downloaded</h2>
+      <br>
+     <div class="row">
+      <div class="card">
+        <img src="img/movie7.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>PROMETHEUS</b></h4> 
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/movie8.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>THOR</b></h4> 
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/movie9.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>THE DARK KNIGHTS RISES</b></h4> 
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+      </div>
+     </div>
+
+     <br>
+
+     <div class="row">
+      <div class="card">
+        <img src="img/movie10.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>THE NEW BATTLE BATMAN</b></h4> 
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/movie12.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>GREAT WARRIORS</b></h4>
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/movie11.jpg" alt="Avatar" style="width:100%">
+        <div class="card-text">
+          <h4 class="text-color2"><b>DARK BATMAN</b></h4> 
+          <div class="ratings">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div> 
+        </div>
+      </div>
+     </div>
+      
+     
+      
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p class="text-color2 footer-text"> Copyright &copy; 2020. All rights reserved | SPROFF</p>
+  </footer>
+
+     
+           
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
