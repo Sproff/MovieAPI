@@ -149,7 +149,7 @@ html, body {
   background-color: #333;
   width: 70%;
   padding: 1.2rem;
-  margin: 1rem;
+  margin-top: 1rem;
   outline: none;
   border: none;
 }
@@ -196,7 +196,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
    /*---- BREAKPOINTS ----*/
    @media only screen and (max-width: 1023px) {
     .navbar .nav-icon { padding: 0 5rem;}
-
    }
   @media only screen and (max-width: 767px) {
     .bg-img { width: 100%;}
@@ -233,7 +232,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     position: fixed;
     left: 100%;
     flex-direction: column;
-    background: #ffffff;
+    /* background: #ffffff; */
+    background-image: linear-gradient(to bottom, #fff , #191919);
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -255,5 +255,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     margin-right: 1rem;
   }
 
-  .navbar .nav-icon ._Menus-show { left: 0;}
+  .navbar .nav-icon ._Menus-show { 
+    left: 0;
+    padding-left: 1rem;
+  }
 }
