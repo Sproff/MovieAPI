@@ -22,8 +22,8 @@ html, body {
 }
 
 .logo { 
-    padding: 1rem 2.5rem;
-    color: #fff;
+  margin: 0 0 0 2rem;
+  color: #fff;
 }
 
 .navbar .logo a {
@@ -42,7 +42,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  padding: 0 10rem;
+  padding: 0 15rem;
 }
 
 .navbar .nav-icon ul {
@@ -71,6 +71,7 @@ html, body {
 }
 
 .close {
+  display: none;
   font-size: 1.5rem;
   padding: 1rem 2rem;
   text-align: right;
@@ -104,25 +105,6 @@ html, body {
   height: 2px;
 }
 
-.close { display: none;}
-
-.search {
-  background-color: #333;
-  width: 70%;
-  padding: 1.2rem;
-  margin: 1rem;
-  outline: none;
-  border: none;
-}
-
-.searchBox { text-align: center;}
-
-input::placeholder { font-size: 1rem;}
-input [type="text"] { 
-  font-size: 1rem;
-  padding: 2rem;
-}
-
 /*---- REUSABLE COMPONENTS----*/
 .text-color { color: #999;}
 .text-color2 { color: #fff;}
@@ -140,7 +122,6 @@ input [type="text"] {
 .row {
   display: flex;
   grid-gap: 20px 50px;
-
 }
 
 .card {
@@ -162,35 +143,65 @@ input [type="text"] {
   cursor: pointer;
 }
 
+/*---- SECTION ----*/
+
+.search {
+  background-color: #333;
+  width: 70%;
+  padding: 1.2rem;
+  margin: 1rem;
+  outline: none;
+  border: none;
+}
+
+.searchBox { text-align: center;}
+
+input::placeholder { font-size: 1rem;}
+input [type="text"] { 
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+.search-icon {
+  font-size: 1.5rem;
+  color: #191919;
+  margin-left: -5rem;
+}
+
+.search-icon:hover { cursor: pointer;}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/*---- FOOTER ----*/
 .footer-text { 
   font-size: 1.2rem;
   padding: 1rem;
   text-align: center;
 }
 
-
+/* 
 .dark-mode {
   background-color: #fff;
   color: #000;
 }
 
-.text-color2-dark-mode { color: #161616;}
+.text-color2-dark-mode { color: #161616;} */
+
+
 
    /*---- BREAKPOINTS ----*/
-  /* Big tablet to 1200px (widths smaller taht the 1140px row) */
-  @media only screen and (max-width: 1200px) {
-  
-  }
-  
-  /* Small tablet to big tablet: from 768px to 1023px */
-  @media only screen and (max-width: 1023px) {
-  }
-  
-  /* Small phones to small tablets: from 481px to 767px */
+   @media only screen and (max-width: 1023px) {
+    .navbar .nav-icon { padding: 0 5rem;}
+
+   }
   @media only screen and (max-width: 767px) {
-    .row {
-      display: block;
-    }
+    .bg-img { width: 100%;}
+
+    .row { display: block;}
 
     .card { 
       width: 100%;
@@ -200,38 +211,11 @@ input [type="text"] {
     .card-text { padding: 0;}
 
     .navbar .nav-icon { padding: 0;}
-  }
-  
-  /* Small phones: from 0 to 480px */
-  @media only screen and (max-width: 480px) {
-    
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 @media only screen and (max-width: 650px) {
+  .logo { margin: 0 0 0 2rem;}
+
   .navbar {
     justify-content: space-between;
   }
@@ -264,15 +248,12 @@ input [type="text"] {
     color: #191919;
   }
 
-  .navbar .nav-icon ul .close {
-    display: block;
-  }
+  .navbar .nav-icon ul .close { display: block;}
 
   .navbar .nav-icon .icon-bar {
     display: flex;
+    margin-right: 1rem;
   }
 
-  .navbar .nav-icon ._Menus-show {
-    left: 0;
-  }
+  .navbar .nav-icon ._Menus-show { left: 0;}
 }
