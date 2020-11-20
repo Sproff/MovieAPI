@@ -7,155 +7,181 @@
 html, body {
   font-family: 'Poppins', sans-serif;
   background-color: #161616;
+  color: #fff;
   scroll-behavior: smooth;
 }
 
-/*---- NAVBAR----*/
-.navbar {
-  height: 60px;
-  background-color: #333333;
- 
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  overflow: hidden;
-}
-
-.logo { 
-  margin: 0 0 0 2rem;
+a {
+  text-decoration: none;
   color: #fff;
 }
 
-.navbar .logo a {
+/*---- NAVBAR----*/
+header {
+  background-color: #333;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+}
+
+header .nav-row {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   height: 60px;
-}
-
-.navbar .logo a img {
-  max-width: 100%;
-  max-height: 60px;
-}
-
-.navbar .nav-icon {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-  padding: 0 15rem;
-}
-
-.navbar .nav-icon ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar .nav-icon ul li a {
-  text-decoration: none;
-  color: #999999;
-  font-size: 1rem;
-  text-transform: uppercase;
-  display: block;
-  height: 60px;
-  line-height: 60px;
-  cursor: pointer;
-  padding: 0 2rem;
-}
-
-.navbar .nav-icon ul li a:hover {
-  color: #ffffff;
-  background-color: rgba(23, 23, 23, 0.9);
-}
-
-.close {
-  display: none;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  text-align: right;
-}
-
-.close:hover { 
-  cursor: pointer;
-  color: #333333;
-}
-
-.navbar .nav-icon ul .close span {
-  font-size: 40px;
-  display: inline-block;
-  border: 1px solid #cccccc;
-  padding: 0 10px;
-  cursor: pointer;
-}
-
-.navbar .nav-icon .icon-bar {
-  padding: 18px 8px;
-  width: 50px;
-  height: 60px;
-  display: none;
-  flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
+  align-items: center;
 }
 
-.navbar .nav-icon .icon-bar i {
-  background-color: #ffffff;
-  height: 2px;
+nav a { 
+  margin: 0 1.5rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  transition: all 0.7s;
 }
 
-/*---- REUSABLE COMPONENTS----*/
+nav a:hover {
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(218,165,32 ,1);
+}
+
+
+/*---- REUSABLE COMPONENTS ----*/
 .text-color { color: #999;}
-.text-color2 { color: #fff;}
+.text-color2 { 
+  color: #fff;
+  text-align: center;
+}
 .spacer { margin: 70px 0;}
 
 .checked { color: goldenrod;}
 
-.container { padding: 0 30px;}
+.container { padding: 0 5rem;}
 
-.imgBox {
-  text-align: right;
-  background-color: #333;
+hr { margin: 2rem 0;}
+
+.icon { 
+  padding-right: .5rem;
+  font-size: 2rem;
 }
 
 .row {
   display: flex;
-  grid-gap: 20px 50px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.card {
+/*---- SECTION-BANNER ----*/
+.banner {
+  width: 100%;
+  height: calc(100vh - 60px);
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 35%, rgba(255, 255, 255, 0.2) 100%) 50% center / cover no-repeat, url(../img/bg-mg.jpg);
+}
+
+.banner-content {
+  width: 60%;
+}
+
+.banner-content .rating {
+  font-size: 1.5rem;
+}
+
+.banner-content .movie-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.banner-content .movie-desc {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.banner-content a {
+  background-color: #333;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+.banner-content a:hover {
+  background-color: goldenrod;
+}
+
+.banner-content button {
+  background-color: #fff;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.movie-card {
+  width: 15%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border-radius: 5px;
-  border-radius: 1rem;
-  width: 35%;
+  border-radius: .5rem;
+  margin: 1.5rem;
 }
 
-.card-text {
-  text-align: center;
-  padding: 2rem;
-}
-
-.card:hover {
+.movie-card:hover {
   transform: scale(1.05);
   transition: 0.5s ease-in-out;
   box-shadow: 0 8px 16px 0 rgba(160, 158, 158, 0.2);
   cursor: pointer;
 }
 
+.movie-card img {
+  width: 100%;
+}
+
+.movie-card h4 {
+  font-size: .8rem;
+  line-height: 2;
+  padding: 0 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.movie-card .row {
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.movie-card p {
+  font-size: .7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+
+}
+
+
 /*---- SECTION ----*/
+
+.searchBox { 
+  position: relative;
+  text-align: center;
+  margin: 0 15rem;
+}
 
 .search {
   background-color: #333;
-  width: 70%;
+  color: #fff;
+  width: 100%;
   padding: 1.2rem;
   margin-top: 1rem;
-  margin-right: 3rem;
   outline: none;
   border: none;
 }
 
-.searchBox { text-align: center;}
 
 input::placeholder { font-size: 1rem;}
 input [type="text"] { 
@@ -164,9 +190,12 @@ input [type="text"] {
 }
 
 .search-icon {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  padding: 0 1rem;
   font-size: 1.5rem;
-  color: #191919;
-  margin-left: -5rem;
+  color: #fff;
 }
 
 .search-icon:hover { cursor: pointer;}
@@ -184,80 +213,217 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   text-align: center;
 }
 
-/* 
-.dark-mode {
-  background-color: #fff;
-  color: #000;
-}
+footer a { text-decoration: underline;}
 
-.text-color2-dark-mode { color: #161616;} */
 
 
 
    /*---- BREAKPOINTS ----*/
-   @media only screen and (max-width: 1023px) {
-    .navbar .nav-icon { padding: 0 5rem;}
-   }
-  @media only screen and (max-width: 767px) {
-    .bg-img { width: 100%;}
-
-    .row { display: block;}
-
-    .card { 
+   /* Extra small devices (portrait phones, less than 375px) */
+   @media only screen and (min-width: 0px) {
+    .nav-menu a{ 
+      display: block;
+      border-bottom: 1px solid #555;
       width: 100%;
-      margin: 2rem 0;
+      font-size: 1rem;
+      margin: 2.5rem 0;
+      padding-left: 1rem;
     }
+  
+    .nav-menu.show{
+      width: 50%;
+      height: 100vh;
+      position: fixed;
+      background: rgb(22, 21, 26);
+      right: 0px;
+      top: 60px;
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none;
+      transition: .5s all ease-in-out;
+    }
+  
+    #mobile-nav{ 
+      display: block;
+      cursor: pointer;
+    }
+  
+    .nav-menu{ opacity: 0;}
+  
+    .nav-menu.show{
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  
+    .container { padding: 0 .5rem;}
+  
+    .banner { padding-top: 6rem;}
+  
+    .banner-content .rating { text-align: center;}
+  
+    .banner-content .movie-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .banner-content { width: 100%;}
+  
+    .btn-group {
+      text-align: center;
+    }
+  
+    .banner-content { width: 100%;}
+  
+    .banner-content a {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  
+    .banner-content button { padding: 1rem;}
+  
+    .banner-content .movie-title { font-size: 2rem;}
+  
+    .banner-content .movie-desc  { text-align: center;}
 
-    .card-text { padding: 0;}
-
-    .navbar .nav-icon { padding: 0;}
-}
-
-@media only screen and (max-width: 650px) {
-  .logo { margin: 0 0 0 2rem;}
-
-  .navbar {
-    justify-content: space-between;
+    .movie-card {
+      width: 45%;
+      margin: .4rem;
+    }
+  
+    .footer-text { font-size: .9rem;}
+  
   }
 
-  .navbar .logo {
-    flex: 1;
-  }
-
-  .navbar .nav-icon {
-    flex: 0;
-  }
-
-  .navbar .nav-icon ul {
-    flex-wrap: nowrap;
-    position: fixed;
-    left: 100%;
-    flex-direction: column;
-    /* background: #ffffff; */
-    background-image: linear-gradient(to bottom, #fff , #191919);
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 375px) {
+  .nav-menu a{ 
+    display: block;
+    border-bottom: 1px solid #555;
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    transition: left .3s;
-  }
-
-  .navbar .nav-icon ul li a {
-    padding: 10px;
-    font-size: 16px;
-    height: auto;
-    line-height: normal;
-    color: #191919;
-  }
-
-  .navbar .nav-icon ul .close { display: block;}
-
-  .navbar .nav-icon .icon-bar {
-    display: flex;
-    margin-right: 1rem;
-  }
-
-  .navbar .nav-icon ._Menus-show { 
-    left: 0;
+    font-size: 1rem;
+    margin: 2.5rem 0;
     padding-left: 1rem;
   }
+
+  .nav-menu.show{
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    background: rgb(22, 21, 26);
+    right: 0px;
+    top: 60px;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    transition: .5s all ease-in-out;
+  }
+
+  #mobile-nav{ 
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-menu{ opacity: 0;}
+
+  .nav-menu.show{
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  .container { padding: 0 1rem;}
+
+  .banner { padding-top: 6rem;}
+
+  .banner-content .rating { text-align: center;}
+
+  .banner-content .movie-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .banner-content { width: 100%;}
+
+  .btn-group {
+    text-align: center;
+  }
+
+  .banner-content { width: 100%;}
+
+  .banner-content a {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .banner-content button { padding: 1rem;}
+
+  .banner-content .movie-title { font-size: 2rem;}
+
+  .banner-content .movie-desc  { text-align: center;}
+
+  .movie-card {
+    width: 40%;
+    margin: 1rem
+  }
+
+  .footer-text { font-size: 1rem;}
+
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) {
+  nav a { margin: 0 .8rem;}
+
+  .container { padding: 0 2rem;}
+
+  .movie-card { width: 40%;}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .nav-menu.show{ 
+    opacity: 1;
+    display: none
+  }
+
+  .nav-menu { 
+    display: flex;
+    opacity: 1;
+  }
+
+  .nav-menu a {  
+    margin: 2rem;
+    padding: 0 0 .5rem 0;
+    border-bottom: 1px solid #333;
+  }
+
+  #mobile-nav { display: none;}
+
+  .banner-content { width: 60%;}
+
+  .banner-content .rating { text-align: left;}
+
+  .banner-content .movie-title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .banner-content .movie-desc  { text-align: left;}
+
+  .btn-group {
+    text-align: left;
+  }
+
+  .movie-card { width: 25%;}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .footer-text { font-size: 1.2rem;}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .movie-card { width: 15%;}
+}
+   
