@@ -249,6 +249,8 @@ footer a { text-decoration: underline;}
       transform: scaleY(1);
       opacity: 1;
     }
+
+    .nav-row a { padding-left: 1rem;}
   
     .container { padding: 0 .5rem;}
   
@@ -389,10 +391,15 @@ footer a { text-decoration: underline;}
     border-bottom: 1px solid #333;
   }
 
+  .nav-row a { padding-left: 3rem;}
+
   #mobile-nav { display: none;}
 
-  .banner-content { width: 60%;}
-
+  .banner-content {
+    width: 70%;
+    padding-left: 3rem;
+  }
+  
   .banner-content .rating { text-align: left;}
 
   .banner-content .movie-title {
@@ -410,10 +417,26 @@ footer a { text-decoration: underline;}
 }
 
 @media only screen and (min-width: 992px) {
+
+  .nav-row a { padding-left: 5rem;}
+
+  .banner-content {
+    width: 70%;
+    padding-left: 5rem;
+  }
+
+
   .footer-text { font-size: 1.2rem;}
 }
 
 @media only screen and (min-width: 1200px) {
+  .nav-row a { padding-left: 6rem;}
+
+  .banner-content {
+    width: 70%;
+    padding-left: 6rem;
+  }
+ 
   .movie-card { width: 15%;}
 }
    
