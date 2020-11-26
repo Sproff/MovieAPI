@@ -17,7 +17,7 @@ axios.get(API_URL).then(function(response) {
     console.log("OUR RESPONSE", response.data)
 
     const movies = response.data.results
-    const firstMovie = movies[1]
+    const firstMovie = movies[4]
 
     document.querySelector('.movie-title').innerHTML = firstMovie.title
 

@@ -73,8 +73,8 @@ hr { margin: 2rem 0;}
 /*---- SECTION-BANNER ----*/
 .banner {
   width: 100%;
-  height: calc(100vh - 60px);
-  padding-bottom: 1rem;
+  /* height: calc(100vh - 60px); */
+  padding: 8rem 0;
   display: flex;
   align-items: center;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 35%, rgba(255, 255, 255, 0.2) 100%) 50% center / cover no-repeat, url(../img/bg-mg.jpg);
@@ -160,7 +160,6 @@ hr { margin: 2rem 0;}
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; 
-
 }
 
 
@@ -216,14 +215,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 footer a { text-decoration: underline;}
 
 
-
-
-   /*---- BREAKPOINTS ----*/
-   /* Extra small devices (portrait phones, less than 375px) */
    @media only screen and (min-width: 0px) {
     .nav-menu a{ 
       display: block;
-      border-bottom: 1px solid #555;
+      border-bottom: 1px solid rgb(128, 126, 126);
       width: 100%;
       font-size: 1rem;
       margin: 2.5rem 0;
@@ -257,12 +252,10 @@ footer a { text-decoration: underline;}
   
     .container { padding: 0 .5rem;}
   
-    .banner { padding-top: 6rem;}
-  
     .banner-content .rating { text-align: center;}
   
     .banner-content .movie-title {
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-align: center;
     }
   
@@ -281,9 +274,10 @@ footer a { text-decoration: underline;}
   
     .banner-content button { padding: 1rem;}
   
-    .banner-content .movie-title { font-size: 2rem;}
-  
-    .banner-content .movie-desc  { text-align: center;}
+    .banner-content .movie-desc  { 
+      text-align: center;
+      font-size: 1rem;
+    }
 
     .movie-card {
       width: 45%;
@@ -294,7 +288,6 @@ footer a { text-decoration: underline;}
   
   }
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 375px) {
   .nav-menu a{ 
     display: block;
@@ -332,12 +325,10 @@ footer a { text-decoration: underline;}
 
   .container { padding: 0 1rem;}
 
-  .banner { padding-top: 6rem;}
-
   .banner-content .rating { text-align: center;}
 
   .banner-content .movie-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 
@@ -356,9 +347,12 @@ footer a { text-decoration: underline;}
 
   .banner-content button { padding: 1rem;}
 
-  .banner-content .movie-title { font-size: 2rem;}
+  .banner-content .movie-title { font-size: 1.5rem;}
 
-  .banner-content .movie-desc  { text-align: center;}
+  .banner-content .movie-desc  { 
+    text-align: center;
+    font-size: 1rem;
+  }
 
   .movie-card {
     width: 40%;
@@ -369,7 +363,6 @@ footer a { text-decoration: underline;}
 
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 576px) {
   nav a { margin: 0 .8rem;}
 
@@ -379,7 +372,6 @@ footer a { text-decoration: underline;}
 
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .nav-menu.show{ 
     opacity: 1;
@@ -417,12 +409,10 @@ footer a { text-decoration: underline;}
   .movie-card { width: 25%;}
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .footer-text { font-size: 1.2rem;}
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .movie-card { width: 15%;}
 }
