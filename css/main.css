@@ -250,7 +250,7 @@ footer a { text-decoration: underline;}
       opacity: 1;
     }
 
-    .nav-row a { padding-left: 1rem;}
+    /* .nav-row a { margin-left: 1rem;} */
   
     .container { padding: 0 .5rem;}
   
@@ -391,7 +391,7 @@ footer a { text-decoration: underline;}
     border-bottom: 1px solid #333;
   }
 
-  .nav-row a { padding-left: 3rem;}
+  .nav-row a { margin-left: 3rem;}
 
   #mobile-nav { display: none;}
 
@@ -418,7 +418,7 @@ footer a { text-decoration: underline;}
 
 @media only screen and (min-width: 992px) {
 
-  .nav-row a { padding-left: 5rem;}
+  .nav-row a { margin-left: 5rem;}
 
   .banner-content {
     width: 70%;
@@ -430,7 +430,7 @@ footer a { text-decoration: underline;}
 }
 
 @media only screen and (min-width: 1200px) {
-  .nav-row a { padding-left: 6rem;}
+  .nav-row a { margin-left: 6rem;}
 
   .banner-content {
     width: 70%;
