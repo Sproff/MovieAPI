@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: 'Poppins', sans-serif;
   background-color: #161616;
   color: #fff;
@@ -31,9 +32,9 @@ header .nav-row {
   align-items: center;
 }
 
-nav a { 
+nav a {
   margin: 0 1.5rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid;
   border-bottom-color: rgba(255, 255, 255, 0);
   transition: all 0.7s;
@@ -41,26 +42,35 @@ nav a {
 
 nav a:hover {
   border-bottom: 1px solid;
-  border-bottom-color: rgba(218,165,32 ,1);
+  border-bottom-color: rgba(218, 165, 32, 1);
 }
 
-
 /*---- REUSABLE COMPONENTS ----*/
-.text-color { color: #999;}
-.text-color2 { 
+.text-color {
+  color: #999;
+}
+.text-color2 {
   color: #fff;
   text-align: center;
 }
-.spacer { margin: 70px 0;}
+.spacer {
+  margin: 70px 0;
+}
 
-.checked { color: goldenrod;}
+.checked {
+  color: goldenrod;
+}
 
-.container { padding: 0 5rem;}
+.container {
+  padding: 0 5rem;
+}
 
-hr { margin: 2rem 0;}
+hr {
+  margin: 2rem 0;
+}
 
-.icon { 
-  padding-right: .5rem;
+.icon {
+  padding-right: 0.5rem;
   font-size: 2rem;
 }
 
@@ -70,14 +80,40 @@ hr { margin: 2rem 0;}
   justify-content: center;
 }
 
+.search-group {
+  position: absolute;
+  top: 70px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input {
+  padding: .8rem;
+  border-radius: 5px;
+  border: none;
+  width: 50%;
+  background-color: #333;
+  color: #fff;
+}
+
 /*---- SECTION-BANNER ----*/
 .banner {
   width: 100%;
-  /* height: calc(100vh - 60px); */
+  height: 100vh;
   padding: 8rem 0;
   display: flex;
   align-items: center;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 35%, rgba(255, 255, 255, 0.2) 100%) 50% center / cover no-repeat, url(../img/bg-mg.jpg);
+  background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.9) 35%,
+        rgba(255, 255, 255, 0.2) 100%
+      )
+      50% center / cover no-repeat,
+    url(../img/bg-mg.jpg);
 }
 
 .banner-content {
@@ -99,6 +135,7 @@ hr { margin: 2rem 0;}
   font-weight: 300;
   line-height: 1.8;
   margin-bottom: 1rem;
+  padding: 1rem 0;
 }
 
 .banner-content a {
@@ -124,8 +161,8 @@ hr { margin: 2rem 0;}
 
 .movie-card {
   width: 15%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border-radius: .5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
   margin: 1.5rem;
 }
 
@@ -141,12 +178,12 @@ hr { margin: 2rem 0;}
 }
 
 .movie-card h4 {
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 2;
   padding: 0 1rem;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
 
 .movie-card .row {
@@ -156,16 +193,15 @@ hr { margin: 2rem 0;}
 }
 
 .movie-card p {
-  font-size: .7rem;
+  font-size: 0.7rem;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
-
 
 /*---- SECTION ----*/
 
-.searchBox { 
+.searchBox {
   position: relative;
   text-align: center;
   margin: 0 15rem;
@@ -181,9 +217,10 @@ hr { margin: 2rem 0;}
   border: none;
 }
 
-
-input::placeholder { font-size: 1rem;}
-input [type="text"] { 
+input::placeholder {
+  font-size: 1rem;
+}
+input [type='text'] {
   font-size: 1rem;
   padding: 2rem;
 }
@@ -197,110 +234,40 @@ input [type="text"] {
   color: #fff;
 }
 
-.search-icon:hover { cursor: pointer;}
+.search-icon:hover {
+  cursor: pointer;
+}
 
 /* clears the ‘X’ from Chrome */
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
 
 /*---- FOOTER ----*/
-.footer-text { 
+.footer-text {
   font-size: 1.2rem;
   padding: 1rem;
   text-align: center;
 }
 
-footer a { text-decoration: underline;}
+footer a {
+  text-decoration: underline;
+}
 
-
-   @media only screen and (min-width: 0px) {
-    .nav-menu a{ 
-      display: block;
-      border-bottom: 1px solid rgb(128, 126, 126);
-      width: 100%;
-      font-size: 1rem;
-      margin: 2.5rem 0;
-      padding-left: 1rem;
-    }
-  
-    .nav-menu.show{
-      width: 50%;
-      height: 100vh;
-      position: fixed;
-      background: rgb(22, 21, 26);
-      right: 0px;
-      top: 60px;
-      margin: 0px;
-      padding: 0px;
-      list-style-type: none;
-      transition: .5s all ease-in-out;
-    }
-  
-    #mobile-nav{ 
-      display: block;
-      cursor: pointer;
-    }
-  
-    .nav-menu{ opacity: 0;}
-  
-    .nav-menu.show{
-      transform: scaleY(1);
-      opacity: 1;
-    }
-
-    /* .nav-row a { margin-left: 1rem;} */
-  
-    .container { padding: 0 .5rem;}
-  
-    .banner-content .rating { text-align: center;}
-  
-    .banner-content .movie-title {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-  
-    .banner-content { width: 100%;}
-  
-    .btn-group {
-      text-align: center;
-    }
-  
-    .banner-content { width: 100%;}
-  
-    .banner-content a {
-      font-size: 1rem;
-      padding: 1rem;
-    }
-  
-    .banner-content button { padding: 1rem;}
-  
-    .banner-content .movie-desc  { 
-      text-align: center;
-      font-size: 1rem;
-    }
-
-    .movie-card {
-      width: 45%;
-      margin: .4rem;
-    }
-  
-    .footer-text { font-size: .9rem;}
-  
-  }
-
-@media only screen and (min-width: 375px) {
-  .nav-menu a{ 
+@media only screen and (min-width: 0px) {
+  .nav-menu a {
     display: block;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid rgb(128, 126, 126);
     width: 100%;
     font-size: 1rem;
     margin: 2.5rem 0;
     padding-left: 1rem;
   }
 
-  .nav-menu.show{
+  .nav-menu.show {
     width: 50%;
     height: 100vh;
     position: fixed;
@@ -310,133 +277,256 @@ footer a { text-decoration: underline;}
     margin: 0px;
     padding: 0px;
     list-style-type: none;
-    transition: .5s all ease-in-out;
+    transition: 0.5s all ease-in-out;
   }
 
-  #mobile-nav{ 
+  #mobile-nav {
     display: block;
     cursor: pointer;
   }
 
-  .nav-menu{ opacity: 0;}
+  .nav-menu {
+    opacity: 0;
+  }
 
-  .nav-menu.show{
+  .nav-menu.show {
     transform: scaleY(1);
     opacity: 1;
   }
 
-  .container { padding: 0 1rem;}
+  /* .nav-row a { margin-left: 1rem;} */
 
-  .banner-content .rating { text-align: center;}
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .banner-content .rating {
+    text-align: center;
+  }
 
   .banner-content .movie-title {
     font-size: 1.5rem;
     text-align: center;
   }
 
-  .banner-content { width: 100%;}
+  .banner-content {
+    width: 100%;
+  }
 
   .btn-group {
     text-align: center;
   }
 
-  .banner-content { width: 100%;}
+  .banner-content {
+    width: 100%;
+  }
 
   .banner-content a {
     font-size: 1rem;
     padding: 1rem;
   }
 
-  .banner-content button { padding: 1rem;}
+  .banner-content button {
+    padding: 1rem;
+  }
 
-  .banner-content .movie-title { font-size: 1.5rem;}
+  .banner-content .movie-desc {
+    text-align: center;
+    font-size: 1rem;
+  }
 
-  .banner-content .movie-desc  { 
+  .movie-card {
+    width: 45%;
+    margin: 0.4rem;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .nav-menu a {
+    display: block;
+    border-bottom: 1px solid #555;
+    width: 100%;
+    font-size: 1rem;
+    margin: 2.5rem 0;
+    padding-left: 1rem;
+  }
+
+  .nav-menu.show {
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    background: rgb(22, 21, 26);
+    right: 0px;
+    top: 60px;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    transition: 0.5s all ease-in-out;
+  }
+
+  #mobile-nav {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    opacity: 0;
+  }
+
+  .nav-menu.show {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .banner-content .rating {
+    text-align: center;
+  }
+
+  .banner-content .movie-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .banner-content {
+    width: 100%;
+  }
+
+  .btn-group {
+    text-align: center;
+  }
+
+  .banner-content {
+    width: 100%;
+  }
+
+  .banner-content a {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .banner-content button {
+    padding: 1rem;
+  }
+
+  .banner-content .movie-title {
+    font-size: 1.5rem;
+  }
+
+  .banner-content .movie-desc {
     text-align: center;
     font-size: 1rem;
   }
 
   .movie-card {
     width: 40%;
-    margin: 1rem
+    margin: 1rem;
   }
 
-  .footer-text { font-size: 1rem;}
-
+  .footer-text {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: 576px) {
-  nav a { margin: 0 .8rem;}
+  nav a {
+    margin: 0 0.8rem;
+  }
 
-  .container { padding: 0 2rem;}
+  .container {
+    padding: 0 2rem;
+  }
 
-  .movie-card { width: 40%;}
-
+  .movie-card {
+    width: 40%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-  .nav-menu.show{ 
+  .nav-menu.show {
     opacity: 1;
-    display: none
+    display: none;
   }
 
-  .nav-menu { 
+  .nav-menu {
     display: flex;
     opacity: 1;
   }
 
-  .nav-menu a {  
+  .nav-menu a {
     margin: 2rem;
-    padding: 0 0 .5rem 0;
+    padding: 0 0 0.5rem 0;
     border-bottom: 1px solid #333;
   }
 
-  .nav-row a { margin-left: 3rem;}
+  .nav-row a {
+    margin-left: 3rem;
+  }
 
-  #mobile-nav { display: none;}
+  #mobile-nav {
+    display: none;
+  }
 
   .banner-content {
     width: 70%;
     padding-left: 3rem;
   }
-  
-  .banner-content .rating { text-align: left;}
+
+  .banner-content .rating {
+    text-align: left;
+  }
 
   .banner-content .movie-title {
     font-size: 2rem;
     text-align: left;
   }
 
-  .banner-content .movie-desc  { text-align: left;}
+  .banner-content .movie-desc {
+    text-align: left;
+  }
 
   .btn-group {
     text-align: left;
   }
 
-  .movie-card { width: 25%;}
+  .movie-card {
+    width: 25%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-
-  .nav-row a { margin-left: 5rem;}
+  .nav-row a {
+    margin-left: 5rem;
+  }
 
   .banner-content {
     width: 70%;
     padding-left: 5rem;
   }
 
-
-  .footer-text { font-size: 1.2rem;}
+  .footer-text {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
-  .nav-row a { margin-left: 6rem;}
+  .nav-row a {
+    margin-left: 6rem;
+  }
 
   .banner-content {
     width: 70%;
     padding-left: 6rem;
   }
- 
-  .movie-card { width: 15%;}
+
+  .movie-card {
+    width: 15%;
+  }
 }
-   
